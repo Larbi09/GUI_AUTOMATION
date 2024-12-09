@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-09T10:49:31.673393" rpa="false" schemaversion="5">
+<suite id="s1" name="MD PP 0028" source="C:\Users\arbi.benzarti\PycharmProjects\SIT GUI AUTOMATION\tests\PP\Master_Data\Update\MD_PP_0028.robot">
+<test id="s1-t1" name="Update Materials Description" line="28">
+<kw name="Connect to Running SAP" owner="RoboSAPiens">
+<msg time="2024-12-09T10:49:39.524046" level="INFO">Connected to a running SAP instance.</msg>
+<doc>Connect to a running SAP instance and take control of it.</doc>
+<status status="PASS" start="2024-12-09T10:49:33.664897" elapsed="5.859149"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-09T10:49:39.525142" level="INFO">${count} = 6</msg>
+<var>${count}</var>
+<arg>len(${MATERIALS})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-09T10:49:39.525142" elapsed="0.000000"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Update Material Description">
+<msg time="2024-12-09T10:49:39.526199" level="FAIL">Value of variable '@{Updated_DESCRIPTIONS}[${index}]' is not list or list-like.</msg>
+<arg>${MATERIALS}[${index}]</arg>
+<arg>${PLANT}</arg>
+<arg>@{Updated_DESCRIPTIONS}[${index}]</arg>
+<status status="FAIL" start="2024-12-09T10:49:39.526199" elapsed="0.000000">Value of variable '@{Updated_DESCRIPTIONS}[${index}]' is not list or list-like.</status>
+</kw>
+<kw name="Update Material Description">
+<arg>${MATERIALS}[${index}]</arg>
+<arg>${PLANT}</arg>
+<arg>${ACTUAL_DESCRIPTIONS}[${index}]</arg>
+<status status="NOT RUN" start="2024-12-09T10:49:39.526199" elapsed="0.000000"/>
+</kw>
+<kw name="Read Statusbar" owner="RoboSAPiens">
+<var>${statusbar}</var>
+<doc>Read the contents of the statusbar. The return value is a dictionary with the entries 'status' and 'message'.</doc>
+<status status="NOT RUN" start="2024-12-09T10:49:39.526199" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Status Bar: ${statusbar['message']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-09T10:49:39.526199" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${statusbar['message']}</arg>
+<arg>Material ${MATERIALS}[${index}] changed</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2024-12-09T10:49:39.526199" elapsed="0.000000"/>
+</kw>
+<var name="${index}">0</var>
+<status status="FAIL" start="2024-12-09T10:49:39.525142" elapsed="0.001057">Value of variable '@{Updated_DESCRIPTIONS}[${index}]' is not list or list-like.</status>
+</iter>
+<var>${index}</var>
+<value>${count}</value>
+<status status="FAIL" start="2024-12-09T10:49:39.525142" elapsed="0.001057">Value of variable '@{Updated_DESCRIPTIONS}[${index}]' is not list or list-like.</status>
+</for>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-12-09T10:49:39.526199" elapsed="0.000000"/>
+</kw>
+<kw name="Push Button" owner="RoboSAPiens">
+<arg>Back</arg>
+<doc>Push the button with the given locator.</doc>
+<status status="NOT RUN" start="2024-12-09T10:49:39.527362" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-12-09T10:49:33.664897" elapsed="5.862465">Value of variable '@{Updated_DESCRIPTIONS}[${index}]' is not list or list-like.</status>
+</test>
+<doc>Updates the material description for a given material and plant in SAP GUI.</doc>
+<status status="FAIL" start="2024-12-09T10:49:31.675696" elapsed="7.852786"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="MD PP 0028">MD PP 0028</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
