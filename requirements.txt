@@ -1,4 +1,4 @@
 robotframework
-robosapiens
+robotframework-robosapiens
 robotframework-sapguilibrary
 robotframework-seleniumlibrary
