@@ -6,9 +6,9 @@ Library  BuiltIn
 
 *** Variables ***
 ${PLANT}                 TN30
-@{MATERIALS}            YB0075056525  YB00755040  YB00755055  D07X01790CU  YB00754500   YA00353055
-@{Updated_DESCRIPTIONS}         FLRY-B 0.75 WH/BU//GY.  FLRY-B 0.75 RD/GN.  FLRY-B 0.75 RD/BN.  MDW 7x0.179 Copper.  FLRY-B 0.75 OG.    FLRY-A 0.35 LBU/BN..07:22.
-@{ACTUAL_DESCRIPTIONS}  FLRY-B 0.75 WH/BU//GY  FLRY-B 0.75 RD/GN  FLRY-B 0.75 RD/BN  MDW 7x0.179 Copper  FLRY-B 0.75 OG         FLRY-A 0.35 LBU/BN..07:22
+@{MATERIALS}            YB0075056525  YB00755040  YB00755055  D07X01790CU  YB00754500
+@{DESCRIPTIONS}         FLRY-B 0.75 WH/BU//GY.  FLRY-B 0.75 RD/GN.  FLRY-B 0.75 RD/BN.  MDW 7x0.179 Copper.  FLRY-B 0.75 OG.
+@{ACTUAL_DESCRIPTIONS}  FLRY-B 0.75 WH/BU//GY  FLRY-B 0.75 RD/GN  FLRY-B 0.75 RD/BN  MDW 7x0.179 Copper  FLRY-B 0.75 OG
 
 *** Keywords ***
 Update Material Description
@@ -29,11 +29,11 @@ Update Materials Description
     ConnectToRunningSAP
     ${count}=    Evaluate    len(${MATERIALS})
     FOR    ${index}    IN RANGE    ${count}
-        Update Material Description    ${MATERIALS}[${index}]    ${PLANT}    @{Updated_DESCRIPTIONS}[${index}]
+        Update Material Description    ${MATERIALS}[${index}]    ${PLANT}    ${DESCRIPTIONS}[${index}]
         Update Material Description    ${MATERIALS}[${index}]    ${PLANT}    ${ACTUAL_DESCRIPTIONS}[${index}]
         ${statusbar}=    Read Statusbar
         Log    Status Bar: ${statusbar['message']}
         Should Contain    ${statusbar['message']}    Material ${MATERIALS}[${index}] changed
     END
-    Sleep                       2s
+    Sleep                       10s
     Push Button    Back

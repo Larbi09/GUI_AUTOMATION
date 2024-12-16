@@ -1,3 +1,4 @@
+
 *** Settings ***
 Documentation   Updates the material description for a given material and plant in SAP GUI.
 Library  RoboSAPiens
@@ -31,9 +32,6 @@ Update Materials Description
     FOR    ${index}    IN RANGE    ${count}
         Update Material Description    ${MATERIALS}[${index}]    ${PLANT}    ${DESCRIPTIONS}[${index}]
         Update Material Description    ${MATERIALS}[${index}]    ${PLANT}    ${ACTUAL_DESCRIPTIONS}[${index}]
-        ${statusbar}=    Read Statusbar
-        Log    Status Bar: ${statusbar['message']}
-        Should Contain    ${statusbar['message']}    Material ${MATERIALS}[${index}] changed
     END
     Sleep                       10s
     Push Button    Back

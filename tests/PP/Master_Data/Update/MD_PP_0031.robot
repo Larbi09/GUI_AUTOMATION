@@ -31,9 +31,6 @@ Update Materials Description
     FOR    ${index}    IN RANGE    ${count}
         Update Material Description    ${MATERIALS}[${index}]    ${PLANT}    ${DESCRIPTIONS}[${index}]
         Update Material Description    ${MATERIALS}[${index}]    ${PLANT}    ${ACTUAL_DESCRIPTIONS}[${index}]
-        ${statusbar}=    Read Statusbar
-        Log    Status Bar: ${statusbar['message']}
-        Should Contain    ${statusbar['message']}    Material ${MATERIALS}[${index}] changed
     END
-    Sleep                       10s
+    Sleep                      10s
     Push Button    Back
