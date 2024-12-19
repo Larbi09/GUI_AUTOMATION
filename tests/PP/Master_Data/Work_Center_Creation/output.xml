@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-11T18:38:08.735322" rpa="false" schemaversion="5">
+<suite id="s1" name="MD PP 0010" source="C:\Users\arbi.benzarti\PycharmProjects\SIT GUI AUTOMATION\tests\PP\Master_Data\Work_Center_Creation\MD_PP_0010.robot">
+<test id="s1-t1" name="Create Workcenter" line="15">
+<kw name="Login to SAP" owner="login">
+<kw name="Open SAP" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:14.814829" level="INFO">SAP was opened.</msg>
+<arg>C:\\Program Files (x86)\\SAP\\FrontEnd\\SAPgui\\saplogon.exe</arg>
+<doc>Open SAP GUI or SAP Business Client.</doc>
+<status status="PASS" start="2024-12-11T18:38:09.455075" elapsed="5.359754"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-11T18:38:19.816784" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-11T18:38:14.814829" elapsed="5.001955"/>
+</kw>
+<kw name="Connect to Server" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:22.700984" level="INFO">Connected to the server QA system</msg>
+<arg>QA system</arg>
+<doc>Connect to the SAP Server provided.</doc>
+<status status="PASS" start="2024-12-11T18:38:19.816784" elapsed="2.884200"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-11T18:38:24.702874" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-11T18:38:22.702044" elapsed="2.000830"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:24.749892" level="INFO">The text field with the locator 'RSYST-MANDT' was filled.</msg>
+<arg>RSYST-MANDT</arg>
+<arg>${client}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-11T18:38:24.703510" elapsed="0.047403"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:24.770607" level="INFO">The text field with the locator 'RSYST-BNAME' was filled.</msg>
+<arg>RSYST-BNAME</arg>
+<arg>${username}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-11T18:38:24.750913" elapsed="0.019694"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:24.785169" level="INFO">The text field with the locator 'RSYST-BCODE' was filled.</msg>
+<arg>RSYST-BCODE</arg>
+<arg>${password}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-11T18:38:24.770607" elapsed="0.015707"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:24.798287" level="INFO">The text field with the locator 'RSYST-LANGU' was filled.</msg>
+<arg>RSYST-LANGU</arg>
+<arg>${language}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-11T18:38:24.786314" elapsed="0.011973"/>
+</kw>
+<kw name="Press Key Combination" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:25.989032" level="INFO">The key combination 'Enter' was pressed.</msg>
+<arg>Enter</arg>
+<doc>Press the given key combination.</doc>
+<status status="PASS" start="2024-12-11T18:38:24.798287" elapsed="1.191763"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-11T18:38:27.993428" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-11T18:38:25.990819" elapsed="2.002609"/>
+</kw>
+<status status="PASS" start="2024-12-11T18:38:09.453821" elapsed="18.539607"/>
+</kw>
+<kw name="Execute Transaction" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:29.770748" level="INFO">The transaction with T-Code cr01 was executed.</msg>
+<arg>cr01</arg>
+<doc>Execute the transaction with the given T-Code.</doc>
+<status status="PASS" start="2024-12-11T18:38:27.994670" elapsed="1.776078"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:30.893370" level="INFO">The text field with the locator 'Plant' was filled.</msg>
+<arg>Plant</arg>
+<arg>TN30</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-11T18:38:29.771784" elapsed="1.121586"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:30.913629" level="INFO">The text field with the locator 'Work Center' was filled.</msg>
+<arg>Work Center</arg>
+<arg>ess10</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-11T18:38:30.895536" elapsed="0.018093"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:30.930643" level="INFO">The text field with the locator 'Work Center Category' was filled.</msg>
+<arg>Work Center Category</arg>
+<arg>0001</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-11T18:38:30.913629" elapsed="0.017014"/>
+</kw>
+<kw name="Push Button" owner="RoboSAPiens">
+<msg time="2024-12-11T18:38:32.627579" level="INFO">The button 'Next screen' was pushed.</msg>
+<arg>Next screen</arg>
+<doc>Push the button with the given locator.</doc>
+<status status="PASS" start="2024-12-11T18:38:30.930643" elapsed="1.696936"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-11T18:38:35.627908" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-11T18:38:32.627579" elapsed="3.000329"/>
+</kw>
+<status status="PASS" start="2024-12-11T18:38:09.453282" elapsed="26.174626"/>
+</test>
+<doc>Create workcenter in SAP GUI.</doc>
+<status status="PASS" start="2024-12-11T18:38:08.742325" elapsed="26.891245"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="MD PP 0010">MD PP 0010</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

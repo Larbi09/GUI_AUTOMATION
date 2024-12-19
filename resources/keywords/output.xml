@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-18T10:47:03.634005" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\arbi.benzarti\PycharmProjects\SIT GUI AUTOMATION\resources\keywords\login.robot">
+<test id="s1-t1" name="Login to SAP" line="13">
+<kw name="Open SAP" owner="RoboSAPiens">
+<msg time="2024-12-18T10:47:10.552376" level="INFO">SAP was opened.</msg>
+<arg>C:\\Program Files (x86)\\SAP\\FrontEnd\\SAPgui\\saplogon.exe</arg>
+<doc>Open SAP GUI or SAP Business Client.</doc>
+<status status="PASS" start="2024-12-18T10:47:06.016635" elapsed="4.535741"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-18T10:47:15.554035" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-18T10:47:10.553374" elapsed="5.000661"/>
+</kw>
+<kw name="Connect to Server" owner="RoboSAPiens">
+<msg time="2024-12-18T10:47:16.861377" level="INFO">Connected to the server QA system</msg>
+<arg>QA system</arg>
+<doc>Connect to the SAP Server provided.</doc>
+<status status="PASS" start="2024-12-18T10:47:15.555143" elapsed="1.307250"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-18T10:47:18.862760" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-18T10:47:16.862393" elapsed="2.000367"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-18T10:47:18.910346" level="INFO">The text field with the locator 'RSYST-MANDT' was filled.</msg>
+<arg>RSYST-MANDT</arg>
+<arg>${client}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-18T10:47:18.863787" elapsed="0.046559"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-18T10:47:18.932669" level="INFO">The text field with the locator 'RSYST-BNAME' was filled.</msg>
+<arg>RSYST-BNAME</arg>
+<arg>${username}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-18T10:47:18.911346" elapsed="0.021323"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-18T10:47:18.945766" level="INFO">The text field with the locator 'RSYST-BCODE' was filled.</msg>
+<arg>RSYST-BCODE</arg>
+<arg>${password}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-18T10:47:18.932669" elapsed="0.014130"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2024-12-18T10:47:18.953326" level="INFO">The text field with the locator 'RSYST-LANGU' was filled.</msg>
+<arg>RSYST-LANGU</arg>
+<arg>${language}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2024-12-18T10:47:18.946799" elapsed="0.006527"/>
+</kw>
+<kw name="Press Key Combination" owner="RoboSAPiens">
+<msg time="2024-12-18T10:47:19.845602" level="INFO">The key combination 'Enter' was pressed.</msg>
+<arg>Enter</arg>
+<doc>Press the given key combination.</doc>
+<status status="PASS" start="2024-12-18T10:47:18.954330" elapsed="0.891272"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-18T10:47:21.847292" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-18T10:47:19.847105" elapsed="2.000187"/>
+</kw>
+<status status="PASS" start="2024-12-18T10:47:06.014637" elapsed="15.833161"/>
+</test>
+<status status="PASS" start="2024-12-18T10:47:03.637797" elapsed="18.211008"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
