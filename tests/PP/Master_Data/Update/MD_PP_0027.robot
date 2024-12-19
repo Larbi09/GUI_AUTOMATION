@@ -1,8 +1,11 @@
 *** Settings ***
 Documentation   Updates the material description for a given material and plant in SAP GUI.
+Resource    ../resources/keywords/login.robot
 Library  RoboSAPiens
 Library  SeleniumLibrary
 Library  BuiltIn
+
+
 
 *** Variables ***
 ${PLANT}                 TN30
@@ -22,10 +25,12 @@ Update Material Description
     Push Button                 Continue
     Fill Text Field             Material Description      ${Description}
     Push Button                 Save
-    Sleep                       2s
+    Sleep                       5s
 
 *** Test Cases ***
+
 Update Materials Description
+    Login To SAP Logon
     ConnectToRunningSAP
     ${count}=    Evaluate    len(${MATERIALS})
     FOR    ${index}    IN RANGE    ${count}

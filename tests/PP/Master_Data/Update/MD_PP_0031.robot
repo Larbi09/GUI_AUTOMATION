@@ -22,7 +22,7 @@ Update Material Description
     Push Button                 Continue
     Fill Text Field             Material Description      ${Description}
     Push Button                 Save
-    Sleep                       2s
+    Sleep                       5s
 
 *** Test Cases ***
 Update Materials Description
@@ -32,5 +32,5 @@ Update Materials Description
         Update Material Description    ${MATERIALS}[${index}]    ${PLANT}    ${DESCRIPTIONS}[${index}]
         Update Material Description    ${MATERIALS}[${index}]    ${PLANT}    ${ACTUAL_DESCRIPTIONS}[${index}]
     END
-    Sleep                      10s
+    Sleep                      15s
     Push Button    Back

@@ -9,8 +9,9 @@ ${password}                 Coficab#2020
 ${client}                   111
 ${language}                 EN
 
+
 *** Keywords ***
-Login to SAP
+Login To SAP Logon
     Open SAP        C:\\Program Files (x86)\\SAP\\FrontEnd\\SAPgui\\saplogon.exe
     Sleep           5s
     Connect to Server    QA system
@@ -20,5 +21,5 @@ Login to SAP
     Fill Text Field    RSYST-BCODE        ${password}
     Fill Text Field    RSYST-LANGU        ${language}
     Press Key Combination    Enter
-    Sleep           2s
+    Sleep           5s
 

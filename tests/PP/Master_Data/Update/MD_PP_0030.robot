@@ -23,7 +23,7 @@ Update Material Description
     Push Button                 Continue
     Fill Text Field             Material Description      ${Description}
     Push Button                 Save
-    Sleep                       2s
+    Sleep                       5s
 
 *** Test Cases ***
 Update Materials Description
