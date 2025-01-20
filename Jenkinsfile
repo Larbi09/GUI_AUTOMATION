@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        RESULTS_DIR = 'results'
+    }
+
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'Git branch to use')
         string(name: 'TEST_CASE_IDS', defaultValue: '', description: 'Comma-separated list of test case IDs')
@@ -18,14 +22,17 @@ pipeline {
             steps {
                 script {
                     if (params.TEST_CASE_IDS) {
+                        // Execute specific test cases
                         def testCases = params.TEST_CASE_IDS.split(',')
                         testCases.each { testCase ->
-                            sh "robot --outputdir results --test ${testCase} test-cases/"
+                            sh "robot --outputdir ${RESULTS_DIR} --test ${testCase} test-cases/"
                         }
                     } else if (params.TEST_DIRECTORY) {
-                        sh "robot --outputdir results test-cases/${params.TEST_DIRECTORY}"
+                        // Execute all tests in a directory
+                        sh "robot --outputdir ${RESULTS_DIR} test-cases/${params.TEST_DIRECTORY}"
                     } else {
-                        sh "robot --outputdir results test-cases/"
+                        // Execute all tests
+                        sh "robot --outputdir ${RESULTS_DIR} test-cases/"
                     }
                 }
             }
@@ -34,8 +41,8 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: 'results/**/*'
-            junit 'results/output.xml'
+            archiveArtifacts artifacts: "${RESULTS_DIR}/**/*"
+            junit "${RESULTS_DIR}/output.xml"
         }
     }
 }
