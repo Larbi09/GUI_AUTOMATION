@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2025-01-13T12:28:24.492703" rpa="false" schemaversion="5">
+<suite id="s1" name="Create PO" source="C:\Users\arbi.benzarti\PycharmProjects\SIT GUI AUTOMATION\tests\PP\Business Process\Create PO\Create_PO__.robot">
+<test id="s1-t1" name="Create Production Orders Repeatedly" line="46">
+<kw name="Connect to Running SAP" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:31.117510" level="INFO">Connected to a running SAP instance.</msg>
+<doc>Connect to a running SAP instance and take control of it.</doc>
+<status status="PASS" start="2025-01-13T12:28:25.147079" elapsed="5.970431"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Create PO">
+<kw name="Execute Transaction" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:31.319946" level="INFO">The transaction with T-Code CO01 was executed.</msg>
+<arg>CO01</arg>
+<doc>Execute the transaction with the given T-Code.</doc>
+<status status="PASS" start="2025-01-13T12:28:31.118472" elapsed="0.201474"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:31.909884" level="INFO">The text field with the locator 'Material' was filled.</msg>
+<arg>Material</arg>
+<arg>${Material}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2025-01-13T12:28:31.319946" elapsed="0.589938"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:31.916387" level="INFO">The text field with the locator 'Production Plant' was filled.</msg>
+<arg>Production Plant</arg>
+<arg>${Plant}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2025-01-13T12:28:31.909884" elapsed="0.006503"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:31.922991" level="INFO">The text field with the locator 'Planning Plant' was filled.</msg>
+<arg>Planning Plant</arg>
+<arg>${Plant}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2025-01-13T12:28:31.916387" elapsed="0.006604"/>
+</kw>
+<kw name="Push Button" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:33.030930" level="INFO">The button 'Continue' was pushed.</msg>
+<arg>Continue</arg>
+<doc>Push the button with the given locator.</doc>
+<status status="PASS" start="2025-01-13T12:28:31.922991" elapsed="1.107939"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:34.184134" level="INFO">The text field with the locator 'Total Order Quantity' was filled.</msg>
+<arg>Total Order Quantity</arg>
+<arg>${total qtt}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2025-01-13T12:28:33.032436" elapsed="1.151698"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:34.193868" level="INFO">The text field with the locator 'Total Scrap Quantity in the Order' was filled.</msg>
+<arg>Total Scrap Quantity in the Order</arg>
+<arg>${scrap qtt}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2025-01-13T12:28:34.184134" elapsed="0.010833"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:34.206568" level="INFO">The text field with the locator 'End' was filled.</msg>
+<arg>End</arg>
+<arg>${Date of end}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2025-01-13T12:28:34.194967" elapsed="0.011601"/>
+</kw>
+<kw name="Fill Text Field" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:34.222393" level="INFO">The text field with the locator 'Start' was filled.</msg>
+<arg>Start</arg>
+<arg>${Date of start}</arg>
+<doc>Fill the text field specified by the locator with the content provided.</doc>
+<status status="PASS" start="2025-01-13T12:28:34.206568" elapsed="0.015825"/>
+</kw>
+<kw name="Push Button" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:34.685610" level="INFO">The button 'Release Order' was pushed.</msg>
+<arg>Release Order</arg>
+<doc>Push the button with the given locator.</doc>
+<status status="PASS" start="2025-01-13T12:28:34.223725" elapsed="0.461885"/>
+</kw>
+<kw name="Push Button" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:35.968279" level="INFO">The button 'Choose' was pushed.</msg>
+<arg>Choose</arg>
+<doc>Push the button with the given locator.</doc>
+<status status="PASS" start="2025-01-13T12:28:34.685610" elapsed="1.282669"/>
+</kw>
+<kw name="Push Button" owner="RoboSAPiens">
+<msg time="2025-01-13T12:28:36.817619" level="FAIL">NotFound: The button 'Continue' could not be found. Hints: Check the spelling, maximize the SAP window</msg>
+<arg>Continue</arg>
+<doc>Push the button with the given locator.</doc>
+<status status="FAIL" start="2025-01-13T12:28:35.968279" elapsed="0.851337">NotFound: The button 'Continue' could not be found. Hints: Check the spelling, maximize the SAP window</status>
+</kw>
+<kw name="Press Key Combination" owner="RoboSAPiens">
+<arg>F5</arg>
+<doc>Press the given key combination.</doc>
+<status status="NOT RUN" start="2025-01-13T12:28:36.819616" elapsed="0.000000"/>
+</kw>
+<kw name="Push Button" owner="RoboSAPiens">
+<arg>Save</arg>
+<doc>Push the button with the given locator.</doc>
+<status status="NOT RUN" start="2025-01-13T12:28:36.819616" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-01-13T12:28:36.819616" elapsed="0.000000"/>
+</kw>
+<kw name="Push Button" owner="RoboSAPiens">
+<arg>Back</arg>
+<doc>Push the button with the given locator.</doc>
+<status status="NOT RUN" start="2025-01-13T12:28:36.819616" elapsed="0.000000"/>
+</kw>
+<arg>${MATERIALS}</arg>
+<arg>${PLANT}</arg>
+<arg>${Qtt}</arg>
+<arg>${Scrap}</arg>
+<arg>${Start Date}</arg>
+<arg>${END Date}</arg>
+<status status="FAIL" start="2025-01-13T12:28:31.118472" elapsed="5.701144">NotFound: The button 'Continue' could not be found. Hints: Check the spelling, maximize the SAP window</status>
+</kw>
+<kw name="Read Statusbar" owner="RoboSAPiens">
+<var>${statusbar}</var>
+<doc>Read the contents of the statusbar. The return value is a dictionary with the entries 'status' and 'message'.</doc>
+<status status="NOT RUN" start="2025-01-13T12:28:36.820614" elapsed="0.000000"/>
+</kw>
+<kw name="Extract Order Number">
+<arg>${statusbar}</arg>
+<status status="NOT RUN" start="2025-01-13T12:28:36.820614" elapsed="0.000000"/>
+</kw>
+<var name="${repeat}">0</var>
+<status status="FAIL" start="2025-01-13T12:28:31.117510" elapsed="5.703104">NotFound: The button 'Continue' could not be found. Hints: Check the spelling, maximize the SAP window</status>
+</iter>
+<var>${repeat}</var>
+<value>500</value>
+<status status="FAIL" start="2025-01-13T12:28:31.117510" elapsed="5.703104">NotFound: The button 'Continue' could not be found. Hints: Check the spelling, maximize the SAP window</status>
+</for>
+<kw name="Log" owner="BuiltIn">
+<arg>All Production Orders: @{ORDER_NUMBERS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-01-13T12:28:36.820614" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-01-13T12:28:36.820614" elapsed="0.000000"/>
+</kw>
+<kw name="Push Button" owner="RoboSAPiens">
+<arg>Back</arg>
+<doc>Push the button with the given locator.</doc>
+<status status="NOT RUN" start="2025-01-13T12:28:36.820614" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-13T12:28:25.146068" elapsed="11.675551">NotFound: The button 'Continue' could not be found. Hints: Check the spelling, maximize the SAP window</status>
+</test>
+<doc>Create Production Order and save the numbers in a list.</doc>
+<status status="FAIL" start="2025-01-13T12:28:24.494784" elapsed="12.326835"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Create PO">Create PO</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
