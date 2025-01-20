@@ -1,921 +1,467 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-18T10:51:45.681035" rpa="false" schemaversion="5">
-<suite id="s1" name="MD PP 0027" source="C:\Users\arbi.benzarti\PycharmProjects\SIT GUI AUTOMATION\tests\PP\Master_Data\Update\MD_PP_0027.robot">
-<test id="s1-t1" name="Update Materials Description" line="32">
-<kw name="Login To SAP Logon" owner="login">
-<kw name="Open SAP" owner="RoboSAPiens">
-<msg time="2024-12-18T10:51:48.424614" level="INFO">SAP was opened.</msg>
-<arg>C:\\Program Files (x86)\\SAP\\FrontEnd\\SAPgui\\saplogon.exe</arg>
-<doc>Open SAP GUI or SAP Business Client.</doc>
-<status status="PASS" start="2024-12-18T10:51:46.168956" elapsed="2.255658"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:51:53.424918" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:51:48.424614" elapsed="5.000304"/>
-</kw>
-<kw name="Connect to Server" owner="RoboSAPiens">
-<msg time="2024-12-18T10:51:55.095527" level="INFO">Connected to the server QA system</msg>
-<arg>QA system</arg>
-<doc>Connect to the SAP Server provided.</doc>
-<status status="PASS" start="2024-12-18T10:51:53.424918" elapsed="1.670609"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:51:57.096216" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:51:55.095527" elapsed="2.000689"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:51:57.125725" level="INFO">The text field with the locator 'RSYST-MANDT' was filled.</msg>
-<arg>RSYST-MANDT</arg>
-<arg>${client}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:51:57.096852" elapsed="0.028873"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:51:57.146436" level="INFO">The text field with the locator 'RSYST-BNAME' was filled.</msg>
-<arg>RSYST-BNAME</arg>
-<arg>${username}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:51:57.126709" elapsed="0.019727"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:51:57.158265" level="INFO">The text field with the locator 'RSYST-BCODE' was filled.</msg>
-<arg>RSYST-BCODE</arg>
-<arg>${password}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:51:57.146436" elapsed="0.011829"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:51:57.168837" level="INFO">The text field with the locator 'RSYST-LANGU' was filled.</msg>
-<arg>RSYST-LANGU</arg>
-<arg>${language}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:51:57.159193" elapsed="0.010609"/>
-</kw>
-<kw name="Press Key Combination" owner="RoboSAPiens">
-<msg time="2024-12-18T10:51:57.906387" level="INFO">The key combination 'Enter' was pressed.</msg>
-<arg>Enter</arg>
-<doc>Press the given key combination.</doc>
-<status status="PASS" start="2024-12-18T10:51:57.169802" elapsed="0.737592"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:52:02.907962" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:51:57.907394" elapsed="5.000568"/>
-</kw>
-<status status="PASS" start="2024-12-18T10:51:46.167956" elapsed="16.740006"/>
-</kw>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2025-01-07T19:46:26.235991" rpa="false" schemaversion="5">
+<suite id="s1" name="MD PP 0028" source="C:\Users\arbi.benzarti\PycharmProjects\SIT GUI AUTOMATION\tests\PP\Master_Data\Update\MD_PP_0028.robot">
+<test id="s1-t1" name="Update Materials Description" line="28">
 <kw name="Connect to Running SAP" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:03.444306" level="INFO">Connected to a running SAP instance.</msg>
+<msg time="2025-01-07T19:46:29.790739" level="INFO">Connected to a running SAP instance.</msg>
 <doc>Connect to a running SAP instance and take control of it.</doc>
-<status status="PASS" start="2024-12-18T10:52:02.907962" elapsed="0.536344"/>
+<status status="PASS" start="2025-01-07T19:46:26.647635" elapsed="3.143104"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-12-18T10:52:03.445304" level="INFO">${count} = 5</msg>
+<msg time="2025-01-07T19:46:29.791740" level="INFO">${count} = 5</msg>
 <var>${count}</var>
 <arg>len(${MATERIALS})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-12-18T10:52:03.445304" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-07T19:46:29.791740" elapsed="0.000000"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Update Material Description">
 <kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:03.744440" level="INFO">The transaction with T-Code MM02 was executed.</msg>
+<msg time="2025-01-07T19:46:30.248884" level="INFO">The transaction with T-Code MM02 was executed.</msg>
 <arg>MM02</arg>
 <doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:52:03.446304" elapsed="0.298136"/>
+<status status="PASS" start="2025-01-07T19:46:29.792741" elapsed="0.456143"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:04.198338" level="INFO">The text field with the locator 'Material' was filled.</msg>
+<msg time="2025-01-07T19:46:30.947815" level="INFO">The text field with the locator 'Material' was filled.</msg>
 <arg>Material</arg>
 <arg>${Material}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:03.744440" elapsed="0.453898"/>
+<status status="PASS" start="2025-01-07T19:46:30.248884" elapsed="0.698931"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:04.573335" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:31.292881" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:04.198338" elapsed="0.374997"/>
+<status status="PASS" start="2025-01-07T19:46:30.947815" elapsed="0.345066"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:04.917546" level="INFO">The button 'Select All' was pushed.</msg>
+<msg time="2025-01-07T19:46:31.707354" level="INFO">The button 'Select All' was pushed.</msg>
 <arg>Select All</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:04.573335" elapsed="0.344211"/>
+<status status="PASS" start="2025-01-07T19:46:31.292881" elapsed="0.414473"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:05.202610" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:32.040732" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:04.918553" elapsed="0.285052"/>
+<status status="PASS" start="2025-01-07T19:46:31.707354" elapsed="0.333378"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:05.361603" level="INFO">The text field with the locator 'Plant' was filled.</msg>
+<msg time="2025-01-07T19:46:32.220923" level="INFO">The text field with the locator 'Plant' was filled.</msg>
 <arg>Plant</arg>
 <arg>${Plant}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:05.203605" elapsed="0.157998"/>
+<status status="PASS" start="2025-01-07T19:46:32.040732" elapsed="0.180191"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:06.057409" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:32.786701" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:05.361603" elapsed="0.695806"/>
+<status status="PASS" start="2025-01-07T19:46:32.220923" elapsed="0.565778"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:06.928619" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
+<msg time="2025-01-07T19:46:33.794865" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
 <arg>Material Description</arg>
 <arg>${Description}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:06.057409" elapsed="0.871210"/>
+<status status="PASS" start="2025-01-07T19:46:32.786701" elapsed="1.008164"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:07.751652" level="INFO">The button 'Save' was pushed.</msg>
+<msg time="2025-01-07T19:46:34.452954" level="INFO">The button 'Save' was pushed.</msg>
 <arg>Save</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:06.928619" elapsed="0.824018"/>
+<status status="PASS" start="2025-01-07T19:46:33.794865" elapsed="0.658089"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:52:12.752806" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-01-07T19:46:39.453578" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:52:07.752637" elapsed="5.000169"/>
+<status status="PASS" start="2025-01-07T19:46:34.452954" elapsed="5.000624"/>
 </kw>
 <arg>${MATERIALS}[${index}]</arg>
 <arg>${PLANT}</arg>
 <arg>${DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:52:03.446304" elapsed="9.307016"/>
+<status status="PASS" start="2025-01-07T19:46:29.792741" elapsed="9.660837"/>
 </kw>
 <kw name="Update Material Description">
 <kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:13.339439" level="INFO">The transaction with T-Code MM02 was executed.</msg>
+<msg time="2025-01-07T19:46:40.034434" level="INFO">The transaction with T-Code MM02 was executed.</msg>
 <arg>MM02</arg>
 <doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:52:12.755423" elapsed="0.584016"/>
+<status status="PASS" start="2025-01-07T19:46:39.455119" elapsed="0.579315"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:13.355575" level="INFO">The text field with the locator 'Material' was filled.</msg>
+<msg time="2025-01-07T19:46:40.050473" level="INFO">The text field with the locator 'Material' was filled.</msg>
 <arg>Material</arg>
 <arg>${Material}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:13.340438" elapsed="0.016139"/>
+<status status="PASS" start="2025-01-07T19:46:40.034434" elapsed="0.016039"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:13.644148" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:40.358919" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:13.356577" elapsed="0.287571"/>
+<status status="PASS" start="2025-01-07T19:46:40.050473" elapsed="0.308446"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:13.943317" level="INFO">The button 'Select All' was pushed.</msg>
+<msg time="2025-01-07T19:46:40.682495" level="INFO">The button 'Select All' was pushed.</msg>
 <arg>Select All</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:13.644148" elapsed="0.299169"/>
+<status status="PASS" start="2025-01-07T19:46:40.359918" elapsed="0.322577"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:14.171770" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:40.913335" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:13.943317" elapsed="0.228453"/>
+<status status="PASS" start="2025-01-07T19:46:40.683531" elapsed="0.229804"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:14.313082" level="INFO">The text field with the locator 'Plant' was filled.</msg>
+<msg time="2025-01-07T19:46:41.069416" level="INFO">The text field with the locator 'Plant' was filled.</msg>
 <arg>Plant</arg>
 <arg>${Plant}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:14.171770" elapsed="0.141312"/>
+<status status="PASS" start="2025-01-07T19:46:40.913335" elapsed="0.156081"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:14.881508" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:41.748516" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:14.313082" elapsed="0.568426"/>
+<status status="PASS" start="2025-01-07T19:46:41.069416" elapsed="0.679100"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:15.708923" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
+<msg time="2025-01-07T19:46:42.678338" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
 <arg>Material Description</arg>
 <arg>${Description}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:14.881508" elapsed="0.827415"/>
+<status status="PASS" start="2025-01-07T19:46:41.748516" elapsed="0.931046"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:16.393635" level="INFO">The button 'Save' was pushed.</msg>
+<msg time="2025-01-07T19:46:43.252537" level="INFO">The button 'Save' was pushed.</msg>
 <arg>Save</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:15.708923" elapsed="0.684712"/>
+<status status="PASS" start="2025-01-07T19:46:42.679562" elapsed="0.572975"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:52:21.394058" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-01-07T19:46:48.252883" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:52:16.393635" elapsed="5.000423"/>
+<status status="PASS" start="2025-01-07T19:46:43.252537" elapsed="5.000346"/>
 </kw>
 <arg>${MATERIALS}[${index}]</arg>
 <arg>${PLANT}</arg>
 <arg>${ACTUAL_DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:52:12.753320" elapsed="8.640738"/>
+<status status="PASS" start="2025-01-07T19:46:39.454601" elapsed="8.798282"/>
 </kw>
 <kw name="Read Statusbar" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:21.791389" level="INFO">The statusbar was read.</msg>
-<msg time="2024-12-18T10:52:21.791389" level="INFO">${statusbar} = {'status': 'Success', 'message': 'Material YB0075056525 changed'}</msg>
+<msg time="2025-01-07T19:46:48.689819" level="INFO">The statusbar was read.</msg>
+<msg time="2025-01-07T19:46:48.689819" level="INFO">${statusbar} = {'status': 'Success', 'message': 'Material YB0075056525 changed'}</msg>
 <var>${statusbar}</var>
 <doc>Read the contents of the statusbar. The return value is a dictionary with the entries 'status' and 'message'.</doc>
-<status status="PASS" start="2024-12-18T10:52:21.394058" elapsed="0.397331"/>
+<status status="PASS" start="2025-01-07T19:46:48.252883" elapsed="0.436936"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-18T10:52:21.792374" level="INFO">Status Bar: Material YB0075056525 changed</msg>
+<msg time="2025-01-07T19:46:48.690854" level="INFO">Status Bar: Material YB0075056525 changed</msg>
 <arg>Status Bar: ${statusbar['message']}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-18T10:52:21.791389" elapsed="0.000985"/>
+<status status="PASS" start="2025-01-07T19:46:48.690854" elapsed="0.000000"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${statusbar['message']}</arg>
 <arg>Material ${MATERIALS}[${index}] changed</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-12-18T10:52:21.793355" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-07T19:46:48.690854" elapsed="0.000967"/>
 </kw>
 <var name="${index}">0</var>
-<status status="PASS" start="2024-12-18T10:52:03.445304" elapsed="18.348051"/>
+<status status="PASS" start="2025-01-07T19:46:29.792741" elapsed="18.899080"/>
 </iter>
 <iter>
 <kw name="Update Material Description">
 <kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:21.941926" level="INFO">The transaction with T-Code MM02 was executed.</msg>
+<msg time="2025-01-07T19:46:48.834351" level="INFO">The transaction with T-Code MM02 was executed.</msg>
 <arg>MM02</arg>
 <doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:52:21.794395" elapsed="0.148533"/>
+<status status="PASS" start="2025-01-07T19:46:48.691821" elapsed="0.142530"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:21.958469" level="INFO">The text field with the locator 'Material' was filled.</msg>
+<msg time="2025-01-07T19:46:48.851641" level="INFO">The text field with the locator 'Material' was filled.</msg>
 <arg>Material</arg>
 <arg>${Material}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:21.942928" elapsed="0.015541"/>
+<status status="PASS" start="2025-01-07T19:46:48.835391" elapsed="0.016250"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:22.261584" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:49.154589" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:21.958469" elapsed="0.303115"/>
+<status status="PASS" start="2025-01-07T19:46:48.851641" elapsed="0.302948"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:22.576275" level="INFO">The button 'Select All' was pushed.</msg>
+<msg time="2025-01-07T19:46:49.464863" level="INFO">The button 'Select All' was pushed.</msg>
 <arg>Select All</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:22.262584" elapsed="0.313691"/>
+<status status="PASS" start="2025-01-07T19:46:49.154589" elapsed="0.310274"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:22.825256" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:49.759740" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:22.576275" elapsed="0.248981"/>
+<status status="PASS" start="2025-01-07T19:46:49.466374" elapsed="0.294348"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:22.973899" level="INFO">The text field with the locator 'Plant' was filled.</msg>
+<msg time="2025-01-07T19:46:49.904371" level="INFO">The text field with the locator 'Plant' was filled.</msg>
 <arg>Plant</arg>
 <arg>${Plant}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:22.826239" elapsed="0.147660"/>
+<status status="PASS" start="2025-01-07T19:46:49.760722" elapsed="0.144158"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:23.501646" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:50.454354" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:22.973899" elapsed="0.527747"/>
+<status status="PASS" start="2025-01-07T19:46:49.904880" elapsed="0.549474"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:24.315870" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
+<msg time="2025-01-07T19:46:51.276437" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
 <arg>Material Description</arg>
 <arg>${Description}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:23.501646" elapsed="0.814224"/>
+<status status="PASS" start="2025-01-07T19:46:50.454354" elapsed="0.822083"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:24.572822" level="INFO">The button 'Save' was pushed.</msg>
+<msg time="2025-01-07T19:46:51.809460" level="INFO">The button 'Save' was pushed.</msg>
 <arg>Save</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:24.315870" elapsed="0.256952"/>
+<status status="PASS" start="2025-01-07T19:46:51.276437" elapsed="0.533023"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:52:29.573372" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-01-07T19:46:56.809603" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:52:24.572822" elapsed="5.000550"/>
+<status status="PASS" start="2025-01-07T19:46:51.809460" elapsed="5.000143"/>
 </kw>
 <arg>${MATERIALS}[${index}]</arg>
 <arg>${PLANT}</arg>
 <arg>${DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:52:21.794395" elapsed="7.778977"/>
+<status status="PASS" start="2025-01-07T19:46:48.691821" elapsed="8.118293"/>
 </kw>
 <kw name="Update Material Description">
 <kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:30.111884" level="INFO">The transaction with T-Code MM02 was executed.</msg>
+<msg time="2025-01-07T19:46:57.382567" level="INFO">The transaction with T-Code MM02 was executed.</msg>
 <arg>MM02</arg>
 <doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:52:29.575483" elapsed="0.536401"/>
+<status status="PASS" start="2025-01-07T19:46:56.811126" elapsed="0.571441"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:30.126925" level="INFO">The text field with the locator 'Material' was filled.</msg>
+<msg time="2025-01-07T19:46:57.405312" level="INFO">The text field with the locator 'Material' was filled.</msg>
 <arg>Material</arg>
 <arg>${Material}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:30.111884" elapsed="0.015041"/>
+<status status="PASS" start="2025-01-07T19:46:57.382567" elapsed="0.022745"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:30.411998" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:57.709728" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:30.126925" elapsed="0.285073"/>
+<status status="PASS" start="2025-01-07T19:46:57.405312" elapsed="0.304416"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:30.723418" level="INFO">The button 'Select All' was pushed.</msg>
+<msg time="2025-01-07T19:46:58.060651" level="INFO">The button 'Select All' was pushed.</msg>
 <arg>Select All</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:30.411998" elapsed="0.311420"/>
+<status status="PASS" start="2025-01-07T19:46:57.709728" elapsed="0.350923"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:30.943303" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:58.345348" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:30.723418" elapsed="0.219885"/>
+<status status="PASS" start="2025-01-07T19:46:58.060651" elapsed="0.284697"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:31.105647" level="INFO">The text field with the locator 'Plant' was filled.</msg>
+<msg time="2025-01-07T19:46:58.527527" level="INFO">The text field with the locator 'Plant' was filled.</msg>
 <arg>Plant</arg>
 <arg>${Plant}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:30.943303" elapsed="0.162856"/>
+<status status="PASS" start="2025-01-07T19:46:58.345348" elapsed="0.182179"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:31.634237" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:46:59.220722" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:31.106159" elapsed="0.528078"/>
+<status status="PASS" start="2025-01-07T19:46:58.527527" elapsed="0.694099"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:32.437164" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
+<msg time="2025-01-07T19:47:00.189706" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
 <arg>Material Description</arg>
 <arg>${Description}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:31.634237" elapsed="0.802927"/>
+<status status="PASS" start="2025-01-07T19:46:59.221626" elapsed="0.968080"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:33.108718" level="INFO">The button 'Save' was pushed.</msg>
+<msg time="2025-01-07T19:47:00.731830" level="INFO">The button 'Save' was pushed.</msg>
 <arg>Save</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:32.437164" elapsed="0.671554"/>
+<status status="PASS" start="2025-01-07T19:47:00.189706" elapsed="0.542124"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:52:38.109502" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-01-07T19:47:05.733049" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:52:33.108718" elapsed="5.000784"/>
+<status status="PASS" start="2025-01-07T19:47:00.732828" elapsed="5.000221"/>
 </kw>
 <arg>${MATERIALS}[${index}]</arg>
 <arg>${PLANT}</arg>
 <arg>${ACTUAL_DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:52:29.574490" elapsed="8.535012"/>
+<status status="PASS" start="2025-01-07T19:46:56.810114" elapsed="8.922935"/>
 </kw>
 <kw name="Read Statusbar" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:38.579048" level="INFO">The statusbar was read.</msg>
-<msg time="2024-12-18T10:52:38.579048" level="INFO">${statusbar} = {'status': 'Success', 'message': 'Material YB00755040 changed'}</msg>
+<msg time="2025-01-07T19:47:06.164326" level="INFO">The statusbar was read.</msg>
+<msg time="2025-01-07T19:47:06.164326" level="INFO">${statusbar} = {'status': 'Success', 'message': 'Material YB00755040 changed'}</msg>
 <var>${statusbar}</var>
 <doc>Read the contents of the statusbar. The return value is a dictionary with the entries 'status' and 'message'.</doc>
-<status status="PASS" start="2024-12-18T10:52:38.110667" elapsed="0.468381"/>
+<status status="PASS" start="2025-01-07T19:47:05.733049" elapsed="0.431277"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-18T10:52:38.579048" level="INFO">Status Bar: Material YB00755040 changed</msg>
+<msg time="2025-01-07T19:47:06.164326" level="INFO">Status Bar: Material YB00755040 changed</msg>
 <arg>Status Bar: ${statusbar['message']}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-18T10:52:38.579048" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-07T19:47:06.164326" elapsed="0.001008"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${statusbar['message']}</arg>
 <arg>Material ${MATERIALS}[${index}] changed</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-12-18T10:52:38.580047" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-07T19:47:06.165334" elapsed="0.000000"/>
 </kw>
 <var name="${index}">1</var>
-<status status="PASS" start="2024-12-18T10:52:21.793355" elapsed="16.786692"/>
+<status status="PASS" start="2025-01-07T19:46:48.691821" elapsed="17.473513"/>
 </iter>
 <iter>
 <kw name="Update Material Description">
 <kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:38.721605" level="INFO">The transaction with T-Code MM02 was executed.</msg>
+<msg time="2025-01-07T19:47:06.330770" level="INFO">The transaction with T-Code MM02 was executed.</msg>
 <arg>MM02</arg>
 <doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:52:38.581048" elapsed="0.140557"/>
+<status status="PASS" start="2025-01-07T19:47:06.166842" elapsed="0.163928"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:38.736374" level="INFO">The text field with the locator 'Material' was filled.</msg>
+<msg time="2025-01-07T19:47:06.348674" level="INFO">The text field with the locator 'Material' was filled.</msg>
 <arg>Material</arg>
 <arg>${Material}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:38.721605" elapsed="0.014769"/>
+<status status="PASS" start="2025-01-07T19:47:06.330770" elapsed="0.017904"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:39.029716" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:47:06.657312" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:38.736374" elapsed="0.293342"/>
+<status status="PASS" start="2025-01-07T19:47:06.348674" elapsed="0.308638"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:39.319791" level="INFO">The button 'Select All' was pushed.</msg>
+<msg time="2025-01-07T19:47:06.995139" level="INFO">The button 'Select All' was pushed.</msg>
 <arg>Select All</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:39.029716" elapsed="0.291118"/>
+<status status="PASS" start="2025-01-07T19:47:06.657312" elapsed="0.337827"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:39.584661" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:47:07.253014" level="INFO">The button 'Continue' was pushed.</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:39.320834" elapsed="0.263827"/>
+<status status="PASS" start="2025-01-07T19:47:06.995139" elapsed="0.257875"/>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:39.779707" level="INFO">The text field with the locator 'Plant' was filled.</msg>
+<msg time="2025-01-07T19:47:07.414228" level="INFO">The text field with the locator 'Plant' was filled.</msg>
 <arg>Plant</arg>
 <arg>${Plant}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:39.584661" elapsed="0.195046"/>
+<status status="PASS" start="2025-01-07T19:47:07.253014" elapsed="0.161214"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:40.303998" level="INFO">The button 'Continue' was pushed.</msg>
+<msg time="2025-01-07T19:47:18.852050" level="FAIL">The button could not be pushed. Le serveur a généré une exception. (0x80010105 (RPC_E_SERVERFAULT))
+For more details run 'robot --loglevel DEBUG test.robot' and consult the file log.html</msg>
 <arg>Continue</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:39.779707" elapsed="0.524291"/>
+<status status="FAIL" start="2025-01-07T19:47:07.414228" elapsed="11.438818">The button could not be pushed. Le serveur a généré une exception. (0x80010105 (RPC_E_SERVERFAULT))
+For more details run 'robot --loglevel DEBUG test.robot' and consult the file log.html</status>
 </kw>
 <kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:41.135755" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
 <arg>Material Description</arg>
 <arg>${Description}</arg>
 <doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:40.303998" elapsed="0.831757"/>
+<status status="NOT RUN" start="2025-01-07T19:47:18.853046" elapsed="0.000000"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:41.369809" level="INFO">The button 'Save' was pushed.</msg>
 <arg>Save</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:41.136262" elapsed="0.233547"/>
+<status status="NOT RUN" start="2025-01-07T19:47:18.853046" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:52:46.370189" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:52:41.369809" elapsed="5.000380"/>
+<status status="NOT RUN" start="2025-01-07T19:47:18.853046" elapsed="0.000000"/>
 </kw>
 <arg>${MATERIALS}[${index}]</arg>
 <arg>${PLANT}</arg>
 <arg>${DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:52:38.580047" elapsed="7.790142"/>
+<status status="FAIL" start="2025-01-07T19:47:06.165334" elapsed="12.687712">The button could not be pushed. Le serveur a généré une exception. (0x80010105 (RPC_E_SERVERFAULT))
+For more details run 'robot --loglevel DEBUG test.robot' and consult the file log.html</status>
 </kw>
 <kw name="Update Material Description">
-<kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:46.938816" level="INFO">The transaction with T-Code MM02 was executed.</msg>
-<arg>MM02</arg>
-<doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:52:46.371207" elapsed="0.567609"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:46.955696" level="INFO">The text field with the locator 'Material' was filled.</msg>
-<arg>Material</arg>
-<arg>${Material}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:46.938816" elapsed="0.017390"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:47.272565" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:46.956206" elapsed="0.316359"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:47.569600" level="INFO">The button 'Select All' was pushed.</msg>
-<arg>Select All</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:47.272565" elapsed="0.297035"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:47.830364" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:47.569600" elapsed="0.260764"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:47.983378" level="INFO">The text field with the locator 'Plant' was filled.</msg>
-<arg>Plant</arg>
-<arg>${Plant}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:47.831375" elapsed="0.152003"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:48.496687" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:47.983378" elapsed="0.513309"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:49.335167" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
-<arg>Material Description</arg>
-<arg>${Description}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:48.496687" elapsed="0.839486"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:49.847204" level="INFO">The button 'Save' was pushed.</msg>
-<arg>Save</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:49.336173" elapsed="0.511031"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:52:54.847650" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:52:49.847204" elapsed="5.000446"/>
-</kw>
 <arg>${MATERIALS}[${index}]</arg>
 <arg>${PLANT}</arg>
 <arg>${ACTUAL_DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:52:46.370189" elapsed="8.477461"/>
+<status status="NOT RUN" start="2025-01-07T19:47:18.853046" elapsed="0.000000"/>
 </kw>
 <kw name="Read Statusbar" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:55.257471" level="INFO">The statusbar was read.</msg>
-<msg time="2024-12-18T10:52:55.257471" level="INFO">${statusbar} = {'status': 'Success', 'message': 'Material YB00755055 changed'}</msg>
 <var>${statusbar}</var>
 <doc>Read the contents of the statusbar. The return value is a dictionary with the entries 'status' and 'message'.</doc>
-<status status="PASS" start="2024-12-18T10:52:54.848159" elapsed="0.409312"/>
+<status status="NOT RUN" start="2025-01-07T19:47:18.853046" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-18T10:52:55.258470" level="INFO">Status Bar: Material YB00755055 changed</msg>
 <arg>Status Bar: ${statusbar['message']}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-18T10:52:55.257471" elapsed="0.000999"/>
+<status status="NOT RUN" start="2025-01-07T19:47:18.853046" elapsed="0.000000"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${statusbar['message']}</arg>
 <arg>Material ${MATERIALS}[${index}] changed</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-12-18T10:52:55.258470" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-07T19:47:18.853046" elapsed="0.000000"/>
 </kw>
 <var name="${index}">2</var>
-<status status="PASS" start="2024-12-18T10:52:38.580047" elapsed="16.678423"/>
-</iter>
-<iter>
-<kw name="Update Material Description">
-<kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:55.398916" level="INFO">The transaction with T-Code MM02 was executed.</msg>
-<arg>MM02</arg>
-<doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:52:55.259460" elapsed="0.140461"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:55.413472" level="INFO">The text field with the locator 'Material' was filled.</msg>
-<arg>Material</arg>
-<arg>${Material}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:55.399921" elapsed="0.013551"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:55.718106" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:55.413472" elapsed="0.304634"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:56.036575" level="INFO">The button 'Select All' was pushed.</msg>
-<arg>Select All</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:55.719104" elapsed="0.317471"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:56.259311" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:56.037091" elapsed="0.222220"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:56.411591" level="INFO">The text field with the locator 'Plant' was filled.</msg>
-<arg>Plant</arg>
-<arg>${Plant}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:56.259311" elapsed="0.152280"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:56.967318" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:56.411591" elapsed="0.555727"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:57.757649" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
-<arg>Material Description</arg>
-<arg>${Description}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:52:56.967318" elapsed="0.790331"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:52:58.398781" level="INFO">The button 'Save' was pushed.</msg>
-<arg>Save</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:52:57.758695" elapsed="0.641087"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:53:03.400493" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:52:58.399782" elapsed="5.000711"/>
-</kw>
-<arg>${MATERIALS}[${index}]</arg>
-<arg>${PLANT}</arg>
-<arg>${DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:52:55.259460" elapsed="8.141033"/>
-</kw>
-<kw name="Update Material Description">
-<kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:03.984586" level="INFO">The transaction with T-Code MM02 was executed.</msg>
-<arg>MM02</arg>
-<doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:53:03.401610" elapsed="0.582976"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:04.003263" level="INFO">The text field with the locator 'Material' was filled.</msg>
-<arg>Material</arg>
-<arg>${Material}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:53:03.984586" elapsed="0.018677"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:04.305403" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:04.003263" elapsed="0.302140"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:04.586449" level="INFO">The button 'Select All' was pushed.</msg>
-<arg>Select All</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:04.305403" elapsed="0.281046"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:04.834349" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:04.586449" elapsed="0.247900"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:05.021646" level="INFO">The text field with the locator 'Plant' was filled.</msg>
-<arg>Plant</arg>
-<arg>${Plant}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:53:04.834349" elapsed="0.187297"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:05.521799" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:05.021646" elapsed="0.500153"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:06.430967" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
-<arg>Material Description</arg>
-<arg>${Description}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:53:05.521799" elapsed="0.909168"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:07.044484" level="INFO">The button 'Save' was pushed.</msg>
-<arg>Save</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:06.430967" elapsed="0.613517"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:53:12.044898" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:53:07.044484" elapsed="5.000414"/>
-</kw>
-<arg>${MATERIALS}[${index}]</arg>
-<arg>${PLANT}</arg>
-<arg>${ACTUAL_DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:53:03.400493" elapsed="8.644405"/>
-</kw>
-<kw name="Read Statusbar" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:12.440717" level="INFO">The statusbar was read.</msg>
-<msg time="2024-12-18T10:53:12.440717" level="INFO">${statusbar} = {'status': 'Success', 'message': 'Material D07X01790CU changed'}</msg>
-<var>${statusbar}</var>
-<doc>Read the contents of the statusbar. The return value is a dictionary with the entries 'status' and 'message'.</doc>
-<status status="PASS" start="2024-12-18T10:53:12.044898" elapsed="0.395819"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-12-18T10:53:12.441716" level="INFO">Status Bar: Material D07X01790CU changed</msg>
-<arg>Status Bar: ${statusbar['message']}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-18T10:53:12.440717" elapsed="0.000999"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${statusbar['message']}</arg>
-<arg>Material ${MATERIALS}[${index}] changed</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-12-18T10:53:12.441716" elapsed="0.000000"/>
-</kw>
-<var name="${index}">3</var>
-<status status="PASS" start="2024-12-18T10:52:55.259460" elapsed="17.182256"/>
-</iter>
-<iter>
-<kw name="Update Material Description">
-<kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:12.588462" level="INFO">The transaction with T-Code MM02 was executed.</msg>
-<arg>MM02</arg>
-<doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:53:12.442741" elapsed="0.145721"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:12.604988" level="INFO">The text field with the locator 'Material' was filled.</msg>
-<arg>Material</arg>
-<arg>${Material}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:53:12.588462" elapsed="0.016526"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:12.925431" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:12.604988" elapsed="0.320443"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:13.228019" level="INFO">The button 'Select All' was pushed.</msg>
-<arg>Select All</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:12.925431" elapsed="0.302588"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:13.460482" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:13.228019" elapsed="0.232463"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:13.601819" level="INFO">The text field with the locator 'Plant' was filled.</msg>
-<arg>Plant</arg>
-<arg>${Plant}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:53:13.461382" elapsed="0.140437"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:14.166266" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:13.602828" elapsed="0.563438"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:14.922035" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
-<arg>Material Description</arg>
-<arg>${Description}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:53:14.166266" elapsed="0.755769"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:15.527617" level="INFO">The button 'Save' was pushed.</msg>
-<arg>Save</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:14.922035" elapsed="0.605582"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:53:20.528995" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:53:15.527617" elapsed="5.001378"/>
-</kw>
-<arg>${MATERIALS}[${index}]</arg>
-<arg>${PLANT}</arg>
-<arg>${DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:53:12.441716" elapsed="8.087279"/>
-</kw>
-<kw name="Update Material Description">
-<kw name="Execute Transaction" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:21.060309" level="INFO">The transaction with T-Code MM02 was executed.</msg>
-<arg>MM02</arg>
-<doc>Execute the transaction with the given T-Code.</doc>
-<status status="PASS" start="2024-12-18T10:53:20.531260" elapsed="0.529049"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:21.074876" level="INFO">The text field with the locator 'Material' was filled.</msg>
-<arg>Material</arg>
-<arg>${Material}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:53:21.060309" elapsed="0.014567"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:21.392754" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:21.074876" elapsed="0.317878"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:21.704880" level="INFO">The button 'Select All' was pushed.</msg>
-<arg>Select All</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:21.392754" elapsed="0.312126"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:21.937278" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:21.704880" elapsed="0.232398"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:22.114888" level="INFO">The text field with the locator 'Plant' was filled.</msg>
-<arg>Plant</arg>
-<arg>${Plant}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:53:21.937278" elapsed="0.177610"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:22.620374" level="INFO">The button 'Continue' was pushed.</msg>
-<arg>Continue</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:22.114888" elapsed="0.505486"/>
-</kw>
-<kw name="Fill Text Field" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:23.450235" level="INFO">The text field with the locator 'Material Description' was filled.</msg>
-<arg>Material Description</arg>
-<arg>${Description}</arg>
-<doc>Fill the text field specified by the locator with the content provided.</doc>
-<status status="PASS" start="2024-12-18T10:53:22.620374" elapsed="0.829861"/>
-</kw>
-<kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:24.004260" level="INFO">The button 'Save' was pushed.</msg>
-<arg>Save</arg>
-<doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:23.450235" elapsed="0.554025"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:53:29.005687" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:53:24.004260" elapsed="5.001427"/>
-</kw>
-<arg>${MATERIALS}[${index}]</arg>
-<arg>${PLANT}</arg>
-<arg>${ACTUAL_DESCRIPTIONS}[${index}]</arg>
-<status status="PASS" start="2024-12-18T10:53:20.530262" elapsed="8.475425"/>
-</kw>
-<kw name="Read Statusbar" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:29.396481" level="INFO">The statusbar was read.</msg>
-<msg time="2024-12-18T10:53:29.396481" level="INFO">${statusbar} = {'status': 'Success', 'message': 'Material YB00754500 changed'}</msg>
-<var>${statusbar}</var>
-<doc>Read the contents of the statusbar. The return value is a dictionary with the entries 'status' and 'message'.</doc>
-<status status="PASS" start="2024-12-18T10:53:29.005687" elapsed="0.390794"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-12-18T10:53:29.397955" level="INFO">Status Bar: Material YB00754500 changed</msg>
-<arg>Status Bar: ${statusbar['message']}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-18T10:53:29.397955" elapsed="0.000000"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${statusbar['message']}</arg>
-<arg>Material ${MATERIALS}[${index}] changed</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-12-18T10:53:29.397955" elapsed="0.000981"/>
-</kw>
-<var name="${index}">4</var>
-<status status="PASS" start="2024-12-18T10:53:12.441716" elapsed="16.957220"/>
+<status status="FAIL" start="2025-01-07T19:47:06.165334" elapsed="12.687712">The button could not be pushed. Le serveur a généré une exception. (0x80010105 (RPC_E_SERVERFAULT))
+For more details run 'robot --loglevel DEBUG test.robot' and consult the file log.html</status>
 </iter>
 <var>${index}</var>
 <value>${count}</value>
-<status status="PASS" start="2024-12-18T10:52:03.445304" elapsed="85.953632"/>
+<status status="FAIL" start="2025-01-07T19:46:29.792741" elapsed="49.060305">The button could not be pushed. Le serveur a généré une exception. (0x80010105 (RPC_E_SERVERFAULT))
+For more details run 'robot --loglevel DEBUG test.robot' and consult the file log.html</status>
 </for>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-18T10:53:39.399543" level="INFO">Slept 10 seconds.</msg>
-<arg>10s</arg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-18T10:53:29.398936" elapsed="10.000607"/>
+<status status="NOT RUN" start="2025-01-07T19:47:18.853046" elapsed="0.000000"/>
 </kw>
 <kw name="Push Button" owner="RoboSAPiens">
-<msg time="2024-12-18T10:53:39.654695" level="INFO">The button 'Back' was pushed.</msg>
 <arg>Back</arg>
 <doc>Push the button with the given locator.</doc>
-<status status="PASS" start="2024-12-18T10:53:39.399543" elapsed="0.255152"/>
+<status status="NOT RUN" start="2025-01-07T19:47:18.854554" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-12-18T10:51:46.167956" elapsed="113.486739"/>
+<status status="FAIL" start="2025-01-07T19:46:26.646628" elapsed="52.207926">The button could not be pushed. Le serveur a généré une exception. (0x80010105 (RPC_E_SERVERFAULT))
+For more details run 'robot --loglevel DEBUG test.robot' and consult the file log.html</status>
 </test>
 <doc>Updates the material description for a given material and plant in SAP GUI.</doc>
-<status status="PASS" start="2024-12-18T10:51:45.683036" elapsed="113.971659"/>
+<status status="FAIL" start="2025-01-07T19:46:26.237997" elapsed="52.616557"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="MD PP 0027">MD PP 0027</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="MD PP 0028">MD PP 0028</stat>
 </suite>
 </statistics>
 <errors>

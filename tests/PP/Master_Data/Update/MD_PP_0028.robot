@@ -35,5 +35,5 @@ Update Materials Description
         Log    Status Bar: ${statusbar['message']}
         Should Contain    ${statusbar['message']}    Material ${MATERIALS}[${index}] changed
     END
-    Sleep                       10s
+    Sleep                       5s
     Push Button    Back
